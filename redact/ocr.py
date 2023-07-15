@@ -15,7 +15,9 @@ class OCR:
 
     def extract_text(self):
         text_info = pytesseract.image_to_data(Image.open(self.image_path))
-        return text_info
+        text = pytesseract.image_to_string(Image.open(self.image_path))
+        # print(f"Extracted text: {text}")
+        return text, text_info
 
     """
     TODO:
@@ -23,7 +25,7 @@ class OCR:
     
     """
     def word_bounding_box_map(self):
-        text_info = self.extract_text()
+        text, text_info = self.extract_text()
         text_bounding_boxes = {}
         for single_line in text_info.split('\n'):
             ents = single_line.split('\t')
@@ -35,14 +37,14 @@ class OCR:
                                                 'width' : ents[8],
                                                 'height' : ents[9]
                                             }})
-        return text_bounding_boxes
+        return text, text_bounding_boxes
 
 
 if __name__ == "__main__":
-    image_path = "C:\\Users\\RAJARAJU\\Downloads\\housing.png"
+    image_path = "sample_letter.png"
 
     ocr = OCR(image_path)
-    word2bb = ocr.word_bounding_box_map()
+    text, word2bb = ocr.word_bounding_box_map()
     print(word2bb)
 
 
