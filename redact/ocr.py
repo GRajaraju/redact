@@ -2,6 +2,7 @@ from PIL import Image
 import pytesseract
 from io import StringIO
 import pandas as pd
+# from utils import draw_redaction
 
 """
 Generate a dictionary that contains text and its corresponding bounding boxes.
@@ -30,7 +31,7 @@ class OCR:
         for single_line in text_info.split('\n'):
             ents = single_line.split('\t')
             if len(ents)>1:
-                text_bounding_boxes.update({ents[-1] :
+                text_bounding_boxes.update({ents[-1].strip(",.") :
                                             {
                                                 'x' : ents[6],
                                                 'y' : ents[7],
