@@ -18,9 +18,9 @@ def draw_redaction(image_path, target_path, words_list, word2bb):
         if word in word2bb.keys():
             x1 = int(word2bb[word]['x'])
             y1 = int(word2bb[word]['y'])
-            x2 = int(word2bb[word]['width'])
-            y2 = int(word2bb[word]['height'])
-            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 255), 1)
+            x2 = int(word2bb[word]['width']) + x1
+            y2 = int(word2bb[word]['height']) + y1
+            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 0), -1)
     print(f"Saving redacted image at {target_path}\\Redacted_{file_name}")
     cv2.imwrite(f"{target_path}\Redacted_{file_name}", img)
     
