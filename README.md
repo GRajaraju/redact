@@ -1,6 +1,6 @@
 # Document redaction
 
-This project is to develop an open source redaction application that redacts the critical information in the documents.
+This project is to develop an open source redaction application that redacts the critical or sensitive information in the documents.
 
 The approach is simple, run OCR against the document and generate a word to bounding box mapping which will be used later
 to draw bounding boxes on the documents. 
@@ -15,6 +15,4 @@ Prior to using tesseract, it needs to be installed and update its bin path in th
 
 In addition to tesseract binary, its wrapper pytesseract should be installed.
 
-<h1>TODO</h1>
-<h3>&#x2022;</h3> Handle duplicate entities.
 
