@@ -4,7 +4,6 @@ from transformers import pipeline
 
 class EntityDetection:
   def __init__(self, model_name="dslim/bert-base-ner"):
-    super().__init__()
 
     print(f"Loading model: {model_name}")
     self.tokenizer = AutoTokenizer.from_pretrained(
