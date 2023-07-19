@@ -16,5 +16,5 @@ Prior to using tesseract, it needs to be installed and update its bin path in th
 In addition to tesseract binary, its wrapper pytesseract should be installed.
 
 <h1>TODO</h1>
-<h3>&#x2022; Handle duplicate entities.</h3>
+<h3>&#x2022;</h3> Handle duplicate entities.
 
