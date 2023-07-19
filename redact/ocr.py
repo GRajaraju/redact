@@ -10,7 +10,6 @@ This dictionary will be used to map the words with its bounding boxes.
 """
 class OCR:
     def __init__(self, image_path):
-        super().__init__()
 
         self.image_path = image_path
 
