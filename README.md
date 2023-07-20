@@ -8,7 +8,6 @@ to draw bounding boxes on the documents.
 Pass the text to a language model for NER and make a list of identified entities. Given these entities, retrieve the bounding boxes
 of each word in the list and draw the bounding boxes in the document.
 
-<h1>Architecture</h1>
 <p>
 <img src="https://github.com/GRajaraju/redact/blob/develop/image.png", title="arch design">
 </p>
