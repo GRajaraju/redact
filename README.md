@@ -8,6 +8,8 @@ to draw bounding boxes on the documents.
 Pass the text to a language model for NER and make a list of identified entities. Given these entities, retrieve the bounding boxes
 of each word in the list and draw the bounding boxes in the document.
 
+<h1>Architecture</h1>
+![Alt text](image.png)
 <h1>Installation</h1>
 
 To extract text from a document (image), we need an OCR engine. In this project, we are using an open source model tesseract.
